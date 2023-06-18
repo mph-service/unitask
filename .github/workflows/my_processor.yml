@@ -24,5 +24,11 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
+        env:
+          NODE_TLS_REJECT_UNAUTHORIZED: ${{ secrets.NODE_TLS_REJECT_UNAUTHORIZED }}
+          PR_EMAIL: ${{ secrets.PR_EMAIL }}
+          PR_PASSWORD: ${{ secrets.PR_PASSWORD }}
+          PR_ACTION: ${{ secrets.PR_ACTION }}
+          PR_LIST_ID: ${{ secrets.PR_LIST_ID }}
         run: |
           node app.js
