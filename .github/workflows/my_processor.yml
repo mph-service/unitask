@@ -14,12 +14,10 @@ jobs:
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-    
+    steps:  
       # Runs a single command using the runners shell
       - name: Get Repo
-      - uses: actions/checkout@v2
-      
+      - uses: actions/checkout@v2  
       # Runs a single command using the runners shell
       - name: Starts A Process
         run: npm install crawler
