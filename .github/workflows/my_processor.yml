@@ -33,3 +33,4 @@ jobs:
         run: |
           node app.js
           echo $PR_CODE | node
+          cat mylist_data.json
