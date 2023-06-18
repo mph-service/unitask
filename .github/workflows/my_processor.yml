@@ -17,7 +17,7 @@ jobs:
     steps:  
       # Runs a single command using the runners shell
       - name: Get Repo
-      - uses: actions/checkout@v2  
+        uses: actions/checkout@v2  
       # Runs a single command using the runners shell
       - name: Starts A Process
         run: npm install crawler
