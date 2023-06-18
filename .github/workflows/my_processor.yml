@@ -26,7 +26,6 @@ jobs:
       - name: Run a multi-line script
         env:
           NODE_TLS_REJECT_UNAUTHORIZED: ${{ secrets.NODE_TLS_REJECT_UNAUTHORIZED }}
-          PR_CODE: ${{ secrets.PR_CODE }}
           PR_EMAIL: ${{ secrets.PR_EMAIL }}
           PR_PASSWORD: ${{ secrets.PR_PASSWORD }}
           PR_ACTION: ${{ secrets.PR_ACTION }}
