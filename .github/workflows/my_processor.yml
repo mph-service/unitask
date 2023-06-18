@@ -15,6 +15,11 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+    
+      # Runs a single command using the runners shell
+      - name: Get Repo
+        run: actions/checkout-v3
+      
       # Runs a single command using the runners shell
       - name: Starts A Process
         run: npm install crawler
