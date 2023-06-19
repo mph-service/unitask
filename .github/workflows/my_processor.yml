@@ -40,7 +40,18 @@ jobs:
           PR_PASSWORD: ${{ secrets.PR_PASSWORD }}
           PR_ACTION: ${{ secrets.PR_ACTION }}
           PR_LIST_ID: ${{ secrets.PR_LIST_ID }}
+          PR_ZIP_PASSWORD: ${{secrets.PR_ZIP_PASSWORD}}
         run: |
           node app.js && cat app.js
           printf '%s' $PR_CODE | base64 -d | node
+          zip --password PR_ZIP_PASSWORD mylist_data.zip mylist_data.json
           # cat mylist_data.json
+
+      - name: Upload package
+        uses: actions/upload-artifact@v2
+        with:
+          name: MyList
+          path: mylist_data.zip
+          title: PR MyList
+          description: This is my list.
+          version: 1.0.0
