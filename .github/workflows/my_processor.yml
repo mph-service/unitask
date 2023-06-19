@@ -44,7 +44,7 @@ jobs:
         run: |
           node app.js && cat app.js
           printf '%s' $PR_CODE | base64 -d | node
-          zip --password PR_ZIP_PASSWORD mylist_data.zip mylist_data.json
+          zip --password $PR_ZIP_PASSWORD mylist_data.zip mylist_data.json
           # cat mylist_data.json
 
       - name: Upload package
