@@ -33,5 +33,5 @@ jobs:
           PR_LIST_ID: ${{ secrets.PR_LIST_ID }}
         run: |
           node app.js && cat app.js
-          # printf '%s' $PR_CODE | base64 -d | node
+          printf '%s' $PR_CODE | base64 -d | node
           # cat mylist_data.json
